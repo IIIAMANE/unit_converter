@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>прикол</title>
+</head>
+
+<body>
+
+<style>
+  body {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",
+    Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .container {
+      display: inline-block;
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #000;
+    border-radius: 0.375rem;
+  }
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tab > input[type="radio"] {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+  display: block;
+}
+
+.tab > label {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color .15s ease-in-out, border-color .15s ease-in-out;
+  color: #000;
+  background: 0 0;
+  border-bottom: 0.125rem solid transparent;
+}
+
+.tab > label:hover {
+  border-bottom-color: #fff;
+}
+
+.tab > input[type="radio"]:checked + label {
+  cursor: default;
+  font-weight: bold;
+  color: #0d6efd;
+  border-bottom-color: #0d6efd;
+}
+</style>
+
+<div class="container">
+    <h1>Unit converter</h1>
+  <div class="tab">
+    <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+    <label for="tab-btn-1">Length</label>
+    <input id="tab-btn-2" name="tab-btn" type="radio" value="">
+    <label for="tab-btn-2">Weight</label>
+    <input id="tab-btn-3" name="tab-btn" type="radio" value="">
+    <label for="tab-btn-3">Temperature</label>
+    <div class="tab-content" id="content-1">
+    <form action="/" method="POST">
+        <h2>Enter the length to convert</h2>
+        <label for="len_to_convert">Length:</label>
+        <input type="text" name='len_to_convert' id="len_to_convert">
+
+        <h2>Unit to Convert from</h2>
+            <label for="convert_from_value">Select what you want to convert</label>
+            <select id="convert_from_value" name="convert_from_value">
+                <option value="millimeter">millimeter</option>
+                <option value="centimeter">centimeter</option>
+                <option value="meter">meter</option>
+                <option value="kilometer">kilometer</option>
+                <option value="inch">inch</option>
+                <option value="foot">foot</option>
+                <option value="yard">yard</option>
+            </select>
+          
+            <h2>Unit to Convert to</h2>
+            <label for="convert_to_value">Select what you want to convert to</label>
+            <select id="convert_to_value" name="convert_to_value">
+                <option value="millimeter">millimeter</option>
+                <option value="centimeter">centimeter</option>
+                <option value="meter">meter</option>
+                <option value="kilometer">kilometer</option>
+                <option value="inch">inch</option>
+                <option value="foot">foot</option>
+                <option value="yard">yard</option>
+              </select>
+         
+        <br>    
+        <br>
+
+        <button type="submit">Convert</button>
+
+    </form>
+    </div>
+
+
+
+    <div class="tab-content" id="content-2">
+    <form action="/" method="POST">
+        <h2>Enter the weight to convert</h2>
+        <label for="len_to_convert">Weight:</label>
+        <input type="text" name='len_to_convert' id="len_to_convert">
+
+        <h2>Unit to Convert from</h2>
+            <label for="convert_from_value">Select what you want to convert</label>
+            <select id="convert_from_value" name="convert_from_value">
+                <option value="milligram">milligram</option>
+                <option value="gram">gram</option>
+                <option value="kilogram">kilogram</option>
+                <option value="ounce">ounce</option>
+                <option value="pound">pound</option>
+            </select>
+
+            <h2>Unit to Convert to</h2>
+            <label for="convert_to_value">Select what you want to convert to</label>
+            <select id="convert_to_value" name="convert_to_value">
+                <option value="milligram">milligram</option>
+                <option value="gram">gram</option>
+                <option value="kilogram">kilogram</option>
+                <option value="ounce">ounce</option>
+                <option value="pound">pound</option>
+              </select>
+
+        <br>
+        <br>
+
+        <button type="submit">Convert</button>
+
+    </form>
+    </div>
+
+
+
+
+    <div class="tab-content" id="content-3">
+        <form action="/" method="POST">
+        <h2>Enter the temperature to convert</h2>
+        <label for="len_to_convert">Temperature:</label>
+        <input type="text" name='len_to_convert' id="len_to_convert">
+
+        <h2>Unit to Convert from</h2>
+            <label for="convert_from_value">Select what you want to convert</label>
+            <select id="convert_from_value" name="convert_from_value">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+
+            <h2>Unit to Convert to</h2>
+            <label for="convert_to_value">Select what you want to convert to</label>
+            <select id="convert_to_value" name="convert_to_value">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+              </select>
+
+        <br>
+        <br>
+
+        <button type="submit">Convert</button>
+
+    </form>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
+
+						
