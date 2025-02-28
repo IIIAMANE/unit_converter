@@ -1,6 +1,11 @@
 # Игнорировать папки и файлы Python
 __pycache__/
+.env
+venv/
+env/
+.venv/
 
 # Игнорировать файлы IDE
 .vscode/
 .idea/
+
